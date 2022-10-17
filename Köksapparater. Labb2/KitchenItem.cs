@@ -14,9 +14,30 @@ namespace Köksapparater._Labb2
 
         public KitchenItem(string type, string brand, bool isFunctioning)
         {
-            Type = type;
-            Brand = brand;
-            IsFunctioning = isFunctioning;
+            if (type == "" && brand == "")
+            {
+                Type = "(Tom)";
+                Brand = "(Tom)";
+                IsFunctioning = isFunctioning;
+            }
+            else if (type == "")
+            {
+                Type = "(Tom)";
+                Brand = brand;
+                IsFunctioning = isFunctioning;
+            }
+            else if (brand == "")
+            {
+                Type = type;
+                Brand = "(Tom)";
+                IsFunctioning = isFunctioning;
+            }
+            else
+            {
+                Type = type;
+                Brand = brand;
+                IsFunctioning = isFunctioning;
+            }
 
         }
 

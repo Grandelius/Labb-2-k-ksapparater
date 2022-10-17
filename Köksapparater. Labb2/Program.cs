@@ -134,14 +134,24 @@ void AddKitchenItem()
     Console.Write("Skriv in typ:\n-> ");
     string type = Console.ReadLine();
 
+        if (type == "")
+        {
+            Console.WriteLine("Du har inte skrivit in någon typ!");
+        }
+
     Console.Write("Skriv in märke:\n-> ");
     string brand = Console.ReadLine();
+
+        if (brand == "")
+        {
+            Console.WriteLine("Du har inte skrivit in något märke!");
+        }
 
     while (isfunctioning)
     {
         Console.Write("Fungerar denna köksapparat? (j/n)\n-> ");
 
-        string functioning = Console.ReadLine();
+        string functioning = Console.ReadLine().ToLower();
 
         if (functioning == "j")
         {
